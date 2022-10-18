@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+.n-config-provider,
+.n-config-provider>.n-space,
+.n-config-provider>.n-space>div,
+.n-config-provider>.n-space>div>.n-layout {
+  height: 100%;
+}
