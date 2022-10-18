@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Author: hanbingxu
  * @Date: 2022-10-17 13:53:22
- * @LastEditTime: 2022-10-17 17:58:13
+ * @LastEditTime: 2022-10-18 16:40:40
  * @LastEditors: hanbingxu
  * @FilePath: /vite-chart/src/views/project/items/index.vue
 -->
@@ -18,17 +18,33 @@
                 <img class='img' src="@/assets/vue.svg" />
               </div>
               <template #action>
-                <div>
-                  <span class="title"></span>
-                  <div>
+                <div class="action">
+                  <div class="title">{{item.title}}</div>
+                  <div class="other">
                     <span v-if="item.status==='0'">
                       <n-badge dot processing type='warning' /> <span>未发布</span>
                     </span>
                     <span v-if="item.status==='1'">
                       <n-badge dot processing type='success' /> <span>已发布</span>
                     </span>
-                    
+                    <div class="other-btn">
+                      <n-button size="small">
+                        <template #icon>
+                          <n-icon>
+                            <HammerOutline />
+                          </n-icon>
+                        </template>
+                      </n-button>
+                      <n-button size="small">
+                        <template #icon>
+                          <n-icon>
+                            <EllipsisHorizontal />
+                          </n-icon>
+                        </template>
+                      </n-button>
+                    </div>
                   </div>
+
                 </div>
               </template>
             </n-card>
@@ -46,6 +62,7 @@
 <script setup lang="ts">
 import { reactive, ref } from 'vue'
 import { useMessage } from 'naive-ui'
+import { HammerOutline, EllipsisHorizontal } from '@vicons/ionicons5'
 
 const page = ref(1)
 
@@ -79,6 +96,27 @@ function handleClose() {
         .img {
           width: 80%;
           height: 90%;
+        }
+      }
+      .action {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .title {
+          flex: 1;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+        .other {
+          margin-left: 32px;
+          display: flex;
+          align-items: center;
+          .other-btn {
+            .n-button {
+              margin-left: 8px;
+            }
+          }
         }
       }
     }
