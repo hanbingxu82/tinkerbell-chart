@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Author: hanbingxu
  * @Date: 2022-10-17 13:53:22
- * @LastEditTime: 2022-10-18 16:40:40
+ * @LastEditTime: 2022-10-18 17:22:53
  * @LastEditors: hanbingxu
  * @FilePath: /vite-chart/src/views/project/items/index.vue
 -->
@@ -28,20 +28,29 @@
                       <n-badge dot processing type='success' /> <span>已发布</span>
                     </span>
                     <div class="other-btn">
-                      <n-button size="small">
-                        <template #icon>
-                          <n-icon>
-                            <HammerOutline />
-                          </n-icon>
+                      <!-- 编辑 -->
+                      <n-tooltip placement="bottom" trigger="hover">
+                        <template #trigger>
+                          <n-button size="small">
+                            <template #icon>
+                              <n-icon>
+                                <HammerOutline />
+                              </n-icon>
+                            </template>
+                          </n-button>
                         </template>
-                      </n-button>
-                      <n-button size="small">
-                        <template #icon>
-                          <n-icon>
-                            <EllipsisHorizontal />
-                          </n-icon>
-                        </template>
-                      </n-button>
+                        <span> 编辑 </span>
+                      </n-tooltip>
+                      <!-- 其他内容 -->
+                      <n-dropdown :options="otherOptions" @select="otherSelect">
+                        <n-button size="small">
+                          <template #icon>
+                            <n-icon>
+                              <EllipsisHorizontal />
+                            </n-icon>
+                          </template>
+                        </n-button>
+                      </n-dropdown>
                     </div>
                   </div>
 
@@ -62,10 +71,13 @@
 <script setup lang="ts">
 import { reactive, ref } from 'vue'
 import { useMessage } from 'naive-ui'
-import { HammerOutline, EllipsisHorizontal } from '@vicons/ionicons5'
+import { HammerOutline, EllipsisHorizontal, CopyOutline, BrowsersOutline, Pencil, Send, Trash } from '@vicons/ionicons5'
+import { DocumentDownload } from '@vicons/carbon'
+import { renderIcon } from '@/utils/utils'
 
 const page = ref(1)
 
+// 列表list
 const projectItems = reactive([
   { id: 1, url: 'aaa/123', title: '测试demo', status: '0' },
   { id: 2, url: 'aaa/456', title: '测试demo2', status: '0' },
@@ -73,7 +85,52 @@ const projectItems = reactive([
   { id: 4, url: 'aaa/678', title: '测试demo4', status: '1' },
   { id: 5, url: 'aaa/789', title: '测试demo5', status: '1' }
 ])
+// other 其他 options项
+const otherOptions = [
+  {
+    label: '预览',
+    key: 'profile',
+    icon: renderIcon(BrowsersOutline)
+  },
+  {
+    label: '克隆',
+    key: 'editProfile',
+    icon: renderIcon(CopyOutline)
+  },
+  {
+    label: '重命名',
+    key: 'logout',
+    icon: renderIcon(Pencil)
+  },
+  {
+    type: 'divider',
+    key: 'd1'
+  },
+  {
+    label: '发布',
+    key: 'logout',
+    icon: renderIcon(Send)
+  },
+  {
+    label: '下载',
+    key: 'logout',
+    icon: renderIcon(DocumentDownload)
+  },
+  {
+    type: 'divider',
+    key: 'd1'
+  },
+  {
+    label: '删除',
+    key: 'logout',
+    icon: renderIcon(Trash)
+  }
+]
 const message = useMessage()
+
+function otherSelect() {
+  message.success('选中')
+}
 function handleClose() {
   message.info('Card Close')
 }
@@ -86,6 +143,7 @@ function handleClose() {
     display: flex;
     .item {
       .bg {
+        cursor: pointer;
         width: 100%;
         height: 180px;
         background-image: linear-gradient(#18181c 14px, transparent 0),
