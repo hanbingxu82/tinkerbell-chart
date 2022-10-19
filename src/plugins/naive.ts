@@ -3,11 +3,12 @@
  * @Version: 1.0
  * @Author: hanbingxu
  * @Date: 2022-10-11 10:15:29
- * @LastEditTime: 2022-10-11 10:15:29
+ * @LastEditTime: 2022-10-19 10:08:28
  * @LastEditors: hanbingxu
  * @FilePath: /vite-chart/src/plugins/naive.ts
  */
 import type { App } from 'vue'
+
 import {
   create,
   NA,
@@ -107,7 +108,10 @@ import {
   NColorPicker,
   NWatermark,
   NEmpty,
-  NCollapseTransition
+  NCollapseTransition,
+  useMessage,
+  useLoadingBar,
+  useDialog
 } from 'naive-ui'
 
 const naive = create({
@@ -214,5 +218,10 @@ const naive = create({
 })
 
 export function setupNaive(app: App<Element>) {
+  //挂载在 window 方便与在js中使用
+  window['$message'] = useMessage()
+  window['$loading'] = useLoadingBar()
+  // window['$loading'].finish()
+  window['$dialog'] = useDialog()
   app.use(naive)
 }
