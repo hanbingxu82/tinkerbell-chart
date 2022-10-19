@@ -3,13 +3,14 @@
  * @Version: 1.0
  * @Author: hanbingxu
  * @Date: 2022-10-12 09:34:47
- * @LastEditTime: 2022-10-14 15:10:50
+ * @LastEditTime: 2022-10-19 11:22:11
  * @LastEditors: hanbingxu
  * @FilePath: /vite-chart/src/layout/layoutMenu/menu.ts
  */
 import { h } from 'vue'
 import type { MenuOption } from 'naive-ui'
 import { RouterLink } from 'vue-router'
+import { RouterEnum } from '@/enums/routerEnums'
 import { renderIcon } from '@/utils/utils'
 import {
   TvOutline,
@@ -40,14 +41,32 @@ export const menuOptions: MenuOption[] = [
         key: 'people',
         children: [
           {
-            label: '全部项目',
-            key: 'narrator',
-            icon: renderIcon(TvOutline)
+            label: () =>
+              h(
+                RouterLink,
+                {
+                  to: {
+                    name: RouterEnum.BASE_HOME_ITEMS_NAME,
+                  },
+                },
+                { default: () => '全部项目' }
+              ),
+            key: RouterEnum.BASE_HOME_ITEMS_NAME,
+            icon: renderIcon(TvOutline),
           },
           {
-            label: '我的模板',
-            key: 'narrator',
-            icon: renderIcon(TabletLandscapeOutline)
+            label: () =>
+              h(
+                RouterLink,
+                {
+                  to: {
+                    name: RouterEnum.BASE_HOME_TEMPLATE_NAME,
+                  },
+                },
+                { default: () => '我的模板' }
+              ),
+            key: RouterEnum.BASE_HOME_TEMPLATE_NAME,
+            icon: renderIcon(TabletLandscapeOutline),
           }
         ]
       }

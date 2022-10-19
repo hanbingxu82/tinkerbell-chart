@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Author: hanbingxu
  * @Date: 2022-10-11 18:10:44
- * @LastEditTime: 2022-10-17 14:03:26
+ * @LastEditTime: 2022-10-19 11:38:39
  * @LastEditors: hanbingxu
  * @FilePath: /vite-chart/src/router/modules/project.router.ts
  */
@@ -14,6 +14,7 @@ import { RouterEnum } from '@/enums/routerEnums'
 const importPath = {
   'RouterEnum.BASE_HOME_NAME': () => import('@/views/project/index.vue'),
   'RouterEnum.BASE_HOME_ITEMS_NAME': () => import('@/views/project/items/index.vue'),
+  'RouterEnum.BASE_HOME_TEMPLATE_NAME': () => import('@/views/project/myTemplate/index.vue'),
 }
 
 const projectRoutes: RouteRecordRaw = {
@@ -34,14 +35,14 @@ const projectRoutes: RouteRecordRaw = {
         title: '项目主页'
       }
     },
-    // {
-    //   path: RouterEnum.BASE_HOME_TEMPLATE,
-    //   name: RouterEnum.BASE_HOME_TEMPLATE_NAME,
-    //   component: importPath['RouterEnum.BASE_HOME_TEMPLATE_NAME'],
-    //   meta: {
-    //     title: '我的模板'
-    //   }
-    // },
+    {
+      path: RouterEnum.BASE_HOME_TEMPLATE,
+      name: RouterEnum.BASE_HOME_TEMPLATE_NAME,
+      component: importPath['RouterEnum.BASE_HOME_TEMPLATE_NAME'],
+      meta: {
+        title: '我的模板'
+      }
+    },
     // {
     //   path: RouterEnum.BASE_HOME_TEMPLATE_MARKET,
     //   name: RouterEnum.BASE_HOME_TEMPLATE_MARKET_NAME,

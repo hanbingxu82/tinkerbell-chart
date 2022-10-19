@@ -1,1 +1,60 @@
-$color:red;
+@import "./mixins.scss";
+
+// 过度
+.tb-transition {
+  transition: all 0.4s;
+}
+
+.tb-transition-quick {
+  transition: all 0.2s;
+}
+
+.tb-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.tb-flex-items-center {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.tb-flex-no-wrap {
+  flex-wrap: nowrap !important;
+}
+
+.tb-absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// cursor 小手
+.tb-cursor-pointer {
+  cursor: pointer;
+}
+
+// IE盒模型
+.tb-boderbox {
+  box-sizing: border-box;
+}
+
+// 省略号
+.tb-ellipsis-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-break: break-all;
+}
+
+.tb-d-inline-block {
+  display: inline-block;
+}
+
+.tb-d-block {
+  display: block;
+}

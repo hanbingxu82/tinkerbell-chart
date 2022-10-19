@@ -1,0 +1,9 @@
+@import './config.scss';
+
+@mixin tb($block) {
+  $B: $namespace + '-'+ $block;
+
+  .#{$B} {
+    @content;
+  }
+}
