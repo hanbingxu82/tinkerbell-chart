@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Author: hanbingxu
  * @Date: 2022-10-11 18:10:44
- * @LastEditTime: 2022-10-19 11:38:39
+ * @LastEditTime: 2022-10-19 13:32:52
  * @LastEditors: hanbingxu
  * @FilePath: /vite-chart/src/router/modules/project.router.ts
  */
@@ -15,6 +15,7 @@ const importPath = {
   'RouterEnum.BASE_HOME_NAME': () => import('@/views/project/index.vue'),
   'RouterEnum.BASE_HOME_ITEMS_NAME': () => import('@/views/project/items/index.vue'),
   'RouterEnum.BASE_HOME_TEMPLATE_NAME': () => import('@/views/project/myTemplate/index.vue'),
+  'RouterEnum.BASE_HOME_TEMPLATE_MARKET_NAME': () => import('@/views/project/templateMarket/index.vue')
 }
 
 const projectRoutes: RouteRecordRaw = {
@@ -43,14 +44,14 @@ const projectRoutes: RouteRecordRaw = {
         title: '我的模板'
       }
     },
-    // {
-    //   path: RouterEnum.BASE_HOME_TEMPLATE_MARKET,
-    //   name: RouterEnum.BASE_HOME_TEMPLATE_MARKET_NAME,
-    //   component: importPath['RouterEnum.BASE_HOME_TEMPLATE_MARKET_NAME'],
-    //   meta: {
-    //     title: '模板市场'
-    //   }
-    // }
+    {
+      path: RouterEnum.BASE_HOME_TEMPLATE_MARKET,
+      name: RouterEnum.BASE_HOME_TEMPLATE_MARKET_NAME,
+      component: importPath['RouterEnum.BASE_HOME_TEMPLATE_MARKET_NAME'],
+      meta: {
+        title: '模板市场'
+      }
+    }
   ]
 }
 
