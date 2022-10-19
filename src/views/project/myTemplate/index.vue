@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Author: hanbingxu
  * @Date: 2022-10-19 11:07:32
- * @LastEditTime: 2022-10-19 13:22:13
+ * @LastEditTime: 2022-10-19 13:35:07
  * @LastEditors: hanbingxu
  * @FilePath: /vite-chart/src/views/project/myTemplate/index.vue
 -->
@@ -22,7 +22,7 @@ import { requireErrorImg } from '@/utils'
 
 <style lang="scss" scoped>
 @include tb('my-template') {
-  margin-top: 20%;
+  margin-top: 16%;
   @extend .tb-flex-center;
 }
 </style>

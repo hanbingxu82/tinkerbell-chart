@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Author: hanbingxu
  * @Date: 2022-10-12 09:34:47
- * @LastEditTime: 2022-10-19 11:22:11
+ * @LastEditTime: 2022-10-19 13:34:08
  * @LastEditors: hanbingxu
  * @FilePath: /vite-chart/src/layout/layoutMenu/menu.ts
  */
@@ -81,9 +81,23 @@ export const menuOptions: MenuOption[] = [
       }
     }
   },
+  // {
+  //   label: '模板市场',
+  //   key: 'market',
+  //   icon: renderIcon(DiamondOutline)
+  // },
   {
-    label: '模板市场',
-    key: 'market',
-    icon: renderIcon(DiamondOutline)
+    label: () =>
+      h(
+        RouterLink,
+        {
+          to: {
+            name: RouterEnum.BASE_HOME_TEMPLATE_MARKET_NAME,
+          },
+        },
+        { default: () => '模板市场' }
+      ),
+    key: RouterEnum.BASE_HOME_TEMPLATE_MARKET_NAME,
+    icon: renderIcon(DiamondOutline),
   },
 ]
