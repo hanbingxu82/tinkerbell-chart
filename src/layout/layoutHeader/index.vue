@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Author: hanbingxu
  * @Date: 2022-10-12 09:19:41
- * @LastEditTime: 2022-10-20 11:20:13
+ * @LastEditTime: 2022-10-20 16:27:23
  * @LastEditors: hanbingxu
  * @FilePath: /vite-chart/src/layout/layoutHeader/index.vue
 -->
@@ -11,7 +11,7 @@
   <n-layout>
     <n-layout-header style="height: 60px" bordered>
       <div class="tb-flex-sb header">
-        <slot name="headerMain">
+        <slot name="header">
           <!-- 默认div -->
           <div></div>
         </slot>

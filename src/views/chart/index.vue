@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Author: hanbingxu
  * @Date: 2022-10-19 14:14:24
- * @LastEditTime: 2022-10-20 13:51:40
+ * @LastEditTime: 2022-10-20 16:26:37
  * @LastEditors: hanbingxu
  * @FilePath: /vite-chart/src/views/chart/index.vue
 -->
@@ -11,7 +11,9 @@
   <div class="chart-view">
     <n-layout>
       <n-layout-header bordered>
-        <chartHeader></chartHeader>
+        <chartHeader>
+          
+        </chartHeader>
       </n-layout-header>
     </n-layout>
     <n-layout class="chart-view-edit" has-sider sider-placement="right">
