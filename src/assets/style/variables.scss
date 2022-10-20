@@ -16,6 +16,12 @@
   text-align: center;
 }
 
+.tb-flex-sb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .tb-flex-items-center {
   display: flex;
   align-items: center;
