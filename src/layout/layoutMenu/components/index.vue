@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Author: hanbingxu
  * @Date: 2022-10-19 14:26:32
- * @LastEditTime: 2022-10-19 15:48:36
+ * @LastEditTime: 2022-10-20 11:32:10
  * @LastEditors: hanbingxu
  * @FilePath: /vite-chart/src/layout/layoutMenu/components/index.vue
 -->
@@ -18,7 +18,7 @@
         </n-text>
       </template>
       <n-space justify="center">
-        <n-button v-for="item in typeList" :key="item.key" :disabled="item.disabled">
+        <n-button @click="btnHandle" v-for="item in typeList" :key="item.key" :disabled="item.disabled">
           <template #icon>
             <component :is="item.icon" />
           </template>
@@ -34,6 +34,7 @@ import { reactive, markRaw } from 'vue'
 import { RouterEnum, ChartEnum } from '@/enums/routerEnums'
 import { PieChartSharp, Close } from '@vicons/ionicons5'
 import { ObjectStorage, Store } from '@vicons/carbon'
+import { fetchPathByName, routerTurnByPath, getUUID } from '@/utils'
 
 const props = defineProps({
   showModal: Boolean
@@ -60,7 +61,13 @@ const typeList = reactive([
     disabled: true
   }
 ])
-
+// 处理按钮点击
+function btnHandle(key: string) {
+  closeHandle()
+  const id = getUUID()
+  const path = fetchPathByName(ChartEnum.CHART_HOME_NAME, 'href')
+  routerTurnByPath(path, [id], undefined, true)
+}
 function closeHandle() {
   emit('close', false)
 }

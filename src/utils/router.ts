@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Author: hanbingxu
  * @Date: 2022-10-19 09:52:49
- * @LastEditTime: 2022-10-19 09:53:57
+ * @LastEditTime: 2022-10-20 11:32:55
  * @LastEditors: hanbingxu
  * @FilePath: /vite-chart/src/utils/router.ts
  */
@@ -49,6 +49,37 @@ export const fetchPathByName = (pageName: string, p?: string) => {
   } catch (error) {
     window['$message'].warning('查询路由信息失败，请联系管理员！')
   }
+}
+
+/**
+ * * 根据路径跳转路由
+ * @param path
+ * @param query
+ * @param isReplace
+ * @param windowOpen
+ */
+export const routerTurnByPath = (
+  path: string,
+  query?: Array<string | number>,
+  isReplace?: boolean,
+  windowOpen?: boolean
+) => {
+  let fullPath = ''
+  if (query?.length) {
+    fullPath = `${path}/${query.join('/')}`
+  }
+  if (windowOpen) {
+    return openNewWindow(fullPath)
+  }
+  if (isReplace) {
+    router.replace({
+      path: fullPath,
+    })
+    return
+  }
+  router.push({
+    path: fullPath,
+  })
 }
 
 /**

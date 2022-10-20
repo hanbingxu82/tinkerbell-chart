@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Author: hanbingxu
  * @Date: 2022-10-12 09:43:39
- * @LastEditTime: 2022-10-19 11:12:41
+ * @LastEditTime: 2022-10-20 11:30:31
  * @LastEditors: hanbingxu
  * @FilePath: /vite-chart/src/utils/utils.ts
  */
@@ -24,4 +24,12 @@ export const renderIcon: (icon: any, set?: {}) => () => any = (icon: any, set = 
  */
 export const requireErrorImg = () => {
   return Image_404
+}
+
+/**
+ * * 生成一个不重复的ID
+ * @param { Number } randomLength
+ */
+export const getUUID = (randomLength = 10) => {
+  return Number(Math.random().toString().substring(2, randomLength) + Date.now()).toString(36)
 }

@@ -17,7 +17,7 @@
             <BookmarkAdd />
           </n-icon>
         </template>
-        <template v-if="!collapsed">
+        <template v-if="!collapsed" >
           新增
         </template>
       </n-button>
