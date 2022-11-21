@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Author: hanbingxu
  * @Date: 2022-09-27 14:09:29
- * @LastEditTime: 2022-10-19 09:54:27
+ * @LastEditTime: 2022-10-21 09:32:21
  * @LastEditors: hanbingxu
  * @FilePath: /vite-chart/src/vite-env.d.ts
  */

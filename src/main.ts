@@ -3,12 +3,13 @@
  * @Version: 1.0
  * @Author: hanbingxu
  * @Date: 2022-09-27 14:09:29
- * @LastEditTime: 2022-10-14 10:00:34
+ * @LastEditTime: 2022-10-21 09:54:01
  * @LastEditors: hanbingxu
  * @FilePath: /vite-chart/src/main.ts
  */
 import { createApp } from 'vue'
 import { setupStore } from '@/store'
+import { setupComponents } from '@/packages'
 import { setupNaive } from '@/plugins'
 import { setupRouter } from '@/router'
 import './style.css'
@@ -22,6 +23,8 @@ async function appInit() {
   setupStore(app)
   // 挂载路由
   setupRouter(app)
+  // 挂载 chart 左侧组件列表
+  setupComponents
   // 挂载到页面
   app.mount('#app', true)
 }

@@ -3,7 +3,7 @@
  * @Version: 1.0
  * @Author: hanbingxu
  * @Date: 2022-10-19 14:14:24
- * @LastEditTime: 2022-10-20 16:26:37
+ * @LastEditTime: 2022-10-21 10:27:09
  * @LastEditors: hanbingxu
  * @FilePath: /vite-chart/src/views/chart/index.vue
 -->
@@ -12,7 +12,6 @@
     <n-layout>
       <n-layout-header bordered>
         <chartHeader>
-          
         </chartHeader>
       </n-layout-header>
     </n-layout>
