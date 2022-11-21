@@ -2,8 +2,6 @@
  * @Description: 
  * @Version: 1.0
  * @Author: hanbingxu
- * @Date: 2022-10-20 17:56:57
- * @LastEditTime: 2022-10-20 18:12:33
  * @LastEditors: hanbingxu
  * @FilePath: /vite-chart/src/packages/components/tbImage/index.vue
 -->

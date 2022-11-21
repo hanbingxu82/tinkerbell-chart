@@ -2,8 +2,6 @@
  * @Description: 
  * @Version: 1.0
  * @Author: hanbingxu
- * @Date: 2022-10-19 09:51:12
- * @LastEditTime: 2022-10-19 10:07:47
  * @LastEditors: hanbingxu
  * @FilePath: /vite-chart/src/views/exception/404.vue
 -->

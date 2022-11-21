@@ -2,8 +2,6 @@
  * @Description: 
  * @Version: 1.0
  * @Author: hanbingxu
- * @Date: 2022-10-19 13:31:39
- * @LastEditTime: 2022-10-19 13:34:49
  * @LastEditors: hanbingxu
  * @FilePath: /vite-chart/src/views/project/templateMarket/index.vue
 -->

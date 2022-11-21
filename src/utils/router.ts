@@ -2,8 +2,6 @@
  * @Description: 
  * @Version: 1.0
  * @Author: hanbingxu
- * @Date: 2022-10-19 09:52:49
- * @LastEditTime: 2022-10-20 11:32:55
  * @LastEditors: hanbingxu
  * @FilePath: /vite-chart/src/utils/router.ts
  */

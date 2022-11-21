@@ -1,12 +1,3 @@
-/*
- * @Description: hanbingxu
- * @Version: 1.0
- * @Author: hanbingxu
- * @Date: 2022-09-27 14:09:29
- * @LastEditTime: 2022-10-21 09:54:01
- * @LastEditors: hanbingxu
- * @FilePath: /vite-chart/src/main.ts
- */
 import { createApp } from 'vue'
 import { setupStore } from '@/store'
 import { setupComponents } from '@/packages'

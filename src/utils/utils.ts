@@ -2,8 +2,6 @@
  * @Description: 
  * @Version: 1.0
  * @Author: hanbingxu
- * @Date: 2022-10-12 09:43:39
- * @LastEditTime: 2022-10-20 11:30:31
  * @LastEditors: hanbingxu
  * @FilePath: /vite-chart/src/utils/utils.ts
  */

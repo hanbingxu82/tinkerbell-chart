@@ -2,8 +2,6 @@
  * @Description: 
  * @Version: 1.0
  * @Author: hanbingxu
- * @Date: 2022-10-19 17:19:42
- * @LastEditTime: 2022-10-21 10:55:48
  * @LastEditors: hanbingxu
  * @FilePath: /vite-chart/src/views/chart/chartLeft/index.vue
 -->

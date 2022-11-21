@@ -1,12 +1,3 @@
-/*
- * @Description: 
- * @Version: 1.0
- * @Author: hanbingxu
- * @Date: 2022-09-27 14:09:29
- * @LastEditTime: 2022-10-14 10:00:23
- * @LastEditors: hanbingxu
- * @FilePath: /vite-chart/vite.config.ts
- */
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'

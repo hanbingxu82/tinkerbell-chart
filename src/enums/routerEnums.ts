@@ -1,12 +1,4 @@
-/*
- * @Description: 路由页面-枚举
- * @Version: 1.0
- * @Author: hanbingxu
- * @Date: 2022-10-11 10:07:04
- * @LastEditTime: 2022-10-11 18:26:44
- * @LastEditors: hanbingxu
- * @FilePath: /vite-chart/src/enums/routerEnums.ts
- */
+
 import { ResultEnum } from '@/enums/httpEnum'
 
 export enum ChartEnum {
